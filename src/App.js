@@ -1,25 +1,23 @@
 import React from 'react';
 
-class App extends React.Component {
-  handleClick(name) {
-    return () => {
-      console.log(`${name} clicked`);
-    }
-  }
+function handleClick(name) {
+  return () => {
+    console.log(`${name} clicked`);
+  };
+}
 
-  render() {
-    return (
-      <div>
-        <h1>React Events</h1>
-        <button onClick={this.handleClick('Play')}>
-          Play
-        </button>
-        <button onClick={this.handleClick('Reset')}>
-          Reset
-        </button>
-     </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <h1>React Events</h1>
+      <button onClick={handleClick('Play')}>
+        Play
+      </button>
+      <button onClick={handleClick('Reset')}>
+        Reset
+      </button>
+    </div>
+  )
 }
 
 export default App;
